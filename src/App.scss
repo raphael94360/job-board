@@ -3,10 +3,6 @@
 body {
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  @include large {
-    height: 100vh;
-    position: relative;
-  }
 }
 
 .header {
@@ -71,7 +67,6 @@ body {
     p {
       font-size: 0.7rem;
     }
-
   }
 }
 
@@ -151,7 +146,6 @@ body {
 }
 
 .footer {
-
   width: 100%;
   margin: 0 auto;
   height: 80px;
@@ -163,10 +157,4 @@ body {
   strong {
     font-weight: bold;
   }
-
-  @include large {
-  position: absolute;
-  bottom: 0;
-  }
-
 }
