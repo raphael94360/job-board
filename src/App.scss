@@ -1,8 +1,12 @@
+@import "./assets/css/mediaQueries.scss";
+
 body {
   box-sizing: border-box;
-  height: 100vh;
-  position: relative;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  @include large {
+    height: 100vh;
+    position: relative;
+  }
 }
 
 .header {
@@ -22,22 +26,41 @@ body {
 }
 
 .container {
-  max-width: 700px;
+  max-width: 500px;
   margin: 30px auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include medium {
+    max-width: 700px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  @include large {
+    max-width: 800px;
+    justify-content: space-between;
+  }
 
   .job {
-    width: 180px;
-    height: 180px;
+    width: 250px;
+    height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-bottom: 30px;
     padding: 10px;
-    border: 1px solid black;
+    @include medium {
+      width: 270px;
+      height: 270px;
+    }
+    @include large {
+      width: 200px;
+      height: 200px;
+    }
 
     h2 {
       font-weight: bold;
@@ -48,24 +71,87 @@ body {
     p {
       font-size: 0.7rem;
     }
+
   }
 }
 
 .green {
   border: 5px solid green;
+  margin-bottom: 30px;
+  width: 270px;
+  height: 270px;
+  @include medium {
+    width: 290px;
+    height: 290px;
+  }
+  @include large {
+    width: 230px;
+    height: 230px;
+  }
 }
 
 .yellow {
   border: 5px solid yellow;
+  margin-bottom: 30px;
+  width: 270px;
+  height: 270px;
+  @include medium {
+    width: 290px;
+    height: 290px;
+  }
+  @include large {
+    width: 230px;
+    height: 230px;
+  }
 }
 
 .red {
   border: 5px solid red;
+  margin-bottom: 30px;
+  width: 270px;
+  height: 270px;
+  @include medium {
+    width: 290px;
+    height: 290px;
+  }
+  @include large {
+    width: 230px;
+    height: 230px;
+  }
+}
+
+.blue {
+  border: 5px solid blue;
+  margin-bottom: 30px;
+  width: 270px;
+  height: 270px;
+  @include medium {
+    width: 290px;
+    height: 290px;
+  }
+  @include large {
+    width: 230px;
+    height: 230px;
+  }
+}
+
+.purple {
+  border: 5px solid purple;
+  margin-bottom: 30px;
+  width: 270px;
+  height: 270px;
+  @include medium {
+    width: 290px;
+    height: 290px;
+  }
+  @include large {
+    width: 230px;
+    height: 230px;
+  }
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
+
   width: 100%;
   margin: 0 auto;
   height: 80px;
@@ -77,4 +163,10 @@ body {
   strong {
     font-weight: bold;
   }
+
+  @include large {
+  position: absolute;
+  bottom: 0;
+  }
+
 }
